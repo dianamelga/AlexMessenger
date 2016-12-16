@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "609812666768",
+    "firebase_url": "https://alexmessenger-78d4d.firebaseio.com",
+    "project_id": "alexmessenger-78d4d",
+    "storage_bucket": "alexmessenger-78d4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609812666768:android:9b80d96c2c47fce3",
+        "android_client_info": {
+          "package_name": "com.example.diana.alexmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609812666768-t2406lmiq787qtjah5n17uqpnekrv87n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhyfD8VUnT65e15ZY60f11W7olswwUpzQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609812666768-t2406lmiq787qtjah5n17uqpnekrv87n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
