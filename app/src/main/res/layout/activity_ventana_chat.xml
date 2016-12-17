@@ -5,25 +5,30 @@
     android:id="@+id/activity_ventana_chat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.diana.alexmessenger.VentanaChat">
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="@drawable/ic_send"
-        android:id="@+id/fab"
-        android:tint="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        app:backgroundTint="@color/pantone185c"
-        app:fabSize="mini"
+    <include
+        android:id="@+id/mitoolbar"
+        layout="@layout/toolbar">
 
-        />
+    </include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/list_of_message"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:dividerHeight="16dp"
+        android:divider="@android:color/transparent"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -34,56 +39,26 @@
         android:layout_alignParentLeft="true"
         >
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Message..."
             android:id="@+id/input"
             />
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
-    <ListView
-        android:id="@+id/list_of_message"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:transcriptMode="alwaysScroll"
-        android:stackFromBottom="true"
-        android:layout_above="@+id/fab"
-        android:dividerHeight="16dp"
-        android:divider="@android:color/transparent"
-        android:layout_marginBottom="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-<!--
-    <ImageView
-        android:id="@+id/avatar_icon"
-        android:src="@drawable/ic_action_user"
-        android:layout_width="@dimen/avatar_width"
-        android:layout_height="@dimen/avatar_height"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"/>
-
-    <ImageView
-        android:id="@+id/send_icon"
-        android:src="@drawable/ic_action_send"
-        android:layout_width="@dimen/button_send_width"
-        android:layout_height="@dimen/button_send_height"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
-    
-    <TextView
-        android:text="Nombre de contacto"
-        android:textSize="28dp"
-        android:layout_toRightOf="@+id/avatar_icon"
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/send_icon"
-        android:hint="Escribe un mensaje"/>-->
+        android:clickable="true"
+        android:src="@drawable/ic_send"
+        android:id="@+id/fab"
+        android:layout_gravity="bottom|right"
+        android:elevation="6dp"
+        app:backgroundTint="@color/pantone185c"
+        app:fabSize="mini"
+
+        />
+    </FrameLayout>
+
 </RelativeLayout>

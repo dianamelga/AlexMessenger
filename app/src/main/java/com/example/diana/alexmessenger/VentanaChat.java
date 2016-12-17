@@ -74,7 +74,7 @@ public class VentanaChat extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ventana_chat);
-
+        
         activity_ventana_chat = (RelativeLayout) findViewById(R.id.activity_ventana_chat);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
