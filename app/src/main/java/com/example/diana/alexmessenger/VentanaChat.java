@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.ListViewCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.text.format.DateFormat;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -26,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthProvider;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class VentanaChat extends AppCompatActivity {
 
@@ -33,6 +36,8 @@ public class VentanaChat extends AppCompatActivity {
     private FirebaseListAdapter<ChatMessage> adapter;
     RelativeLayout activity_ventana_chat;
     FloatingActionButton fab;
+
+    public static final String TAG = "NOTICIAS";
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -72,6 +77,8 @@ public class VentanaChat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ventana_chat);
         
@@ -99,6 +106,11 @@ public class VentanaChat extends AppCompatActivity {
                     Snackbar.LENGTH_SHORT).show();
             //carga contenido
             displayChatMessage();
+
+            //probando
+            //String token = FirebaseInstanceId.getInstance().getToken();
+            //Log.d(TAG,"Token "+token);
+            //Toast.makeText(VentanaChat.this, token, Toast.LENGTH_SHORT).show();
         }
 
 
